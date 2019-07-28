@@ -10,13 +10,26 @@ import java.io.PrintWriter;
 public class ComputerServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Integer n=Integer.parseInt(req.getParameter("n"));
-        int sum=0;
-        for (int i = 1; i <= n; i++) {
-            sum=sum+i;
-        }
+        req.setCharacterEncoding("utf-8");
+        resp.setCharacterEncoding("utf8");
+        resp.setContentType("text/html;charset=utf-8");
         PrintWriter out=resp.getWriter();
-        out.println("<h1 style='color:red'>"+sum+"</h1>");
+        int sum=0;
+        if(req.getParameter("n")!=null){
+            int n=Integer.parseInt(req.getParameter("n"));
+            for (;n>0;n--) {
+                sum=sum+n;
+            }
+            out.println("<h1 style='color:red'>sum:"+sum+"</h1>");
+        }
+        if(req.getParameterValues("add")!=null){
+            String [] adds=req.getParameterValues("add");
+            for (String add:adds){
+                sum=sum+Integer.parseInt(add);
+                out.println("<h1>加数为:"+add+"</h1>");
+            }
+            out.println("<h1 style='color:red'>运算结果为："+sum+"</h1>");
 
+        }
     }
 }
