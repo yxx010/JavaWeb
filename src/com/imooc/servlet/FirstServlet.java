@@ -11,7 +11,7 @@ public class FirstServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name=req.getParameter("name");
-        String html="<h1 color=red>hi,"+name+"!</h1>";
+        String html="<h1 style='color:red'>hi,"+name+"!</h1><hr/>";
         PrintWriter out=resp.getWriter();
         out.println(html);
     }
