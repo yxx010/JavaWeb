@@ -28,6 +28,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>ComputerServlet</servlet-name>
-        <url-pattern>/ComputerServlet</url-pattern>
+        <url-pattern>/Computer</url-pattern>
     </servlet-mapping>
 </web-app>
