@@ -21,4 +21,13 @@
         <servlet-name>sample</servlet-name>
         <url-pattern>/sample</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <!--servlet的别名-->
+        <servlet-name>ComputerServlet</servlet-name>
+        <servlet-class>com.imooc.servlet.ComputerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ComputerServlet</servlet-name>
+        <url-pattern>/ComputerServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
