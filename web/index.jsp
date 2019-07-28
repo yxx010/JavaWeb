@@ -11,6 +11,9 @@
     <title>$Title$</title>
   </head>
   <body>
-  <a href="hi">第一个动态web项目</a>
+  <a href="hi">第一个动态web项目</a><br>
+  <a href="salary.jsp">薪酬计算</a><br>
+  <a href="student.html">学生信息登记</a><br>
+  <a href="add.html">加法运算</a><br>
   </body>
 </html>
