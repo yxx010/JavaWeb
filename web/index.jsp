@@ -20,6 +20,8 @@
   <a href="xy.jsp">根据x求y的值</a><br>
   <a href="list.jsp">list测试</a><br>
   <a href="news.jsp">新闻标题</a><br>
+  <a href="nsum.html">n以内的累加和</a><br>
+
 
   </body>
 </html>
