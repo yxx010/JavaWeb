@@ -21,6 +21,10 @@
   <a href="list.jsp">list测试</a><br>
   <a href="news.jsp">新闻标题</a><br>
   <a href="nsum.html">n以内的累加和</a><br>
+  <a href="cookie/login">cookie练习</a><br>
+  <a href="session/login">session练习</a><br>
+
+
 
 
   </body>
