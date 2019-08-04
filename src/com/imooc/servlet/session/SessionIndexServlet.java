@@ -19,7 +19,7 @@ public class SessionIndexServlet extends HttpServlet {
         String sessionId=session.getId();
         System.out.println(sessionId);
        String name=(String)session.getAttribute("name");
-       response.setContentType("text/plain;charset=utf-8");
+       response.setContentType("text/html;charset=utf-8");
        response.getWriter().println("当前用户是："+name);
     }
 }
