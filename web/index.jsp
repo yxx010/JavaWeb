@@ -24,6 +24,10 @@
   <a href="cookie/login">cookie练习</a><br>
   <a href="session/login">session练习</a><br>
   <a href="el">el表达式,可传level参数</a><br>
+  <a href="Jstl">jstl测试</a><br>
+  <a href="x">x值的区间</a><br>
+
+
 
 
 
