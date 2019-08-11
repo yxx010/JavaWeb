@@ -24,9 +24,9 @@
   <a href="cookie/login">cookie练习</a><br>
   <a href="session/login">session练习</a><br>
   <a href="el">el表达式,可传level参数</a><br>
-  <a href="Jstl">jstl测试</a><br>
+  <a href="jstl">jstl测试</a><br>
   <a href="x">x值的区间</a><br>
-  <a href="emplist">展示员工添加员工</a><br>
+  <a href="emplist">展示员工添加员工ServletContext</a><br>
   <a href="emp.html">js展示json数据</a><br>
   </body>
 </html>
