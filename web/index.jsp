@@ -11,7 +11,7 @@
     <title>JavaWeb首页</title>
   </head>
   <body>
-  <a href="hi">第一个web项目，可传参数name</a><br>
+  <a href="hi">hi,name参数</a><br>
   <a href="salary.jsp">薪酬计算</a><br>
   <a href="student.html">学生信息登记</a><br>
   <a href="add.html">加法运算</a><br>
@@ -26,11 +26,7 @@
   <a href="el">el表达式,可传level参数</a><br>
   <a href="Jstl">jstl测试</a><br>
   <a href="x">x值的区间</a><br>
-
-
-
-
-
-
+  <a href="emplist">展示员工添加员工</a><br>
+  <a href="emp.html">js展示json数据</a><br>
   </body>
 </html>

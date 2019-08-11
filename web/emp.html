@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+        var json=[
+            {
+                "no": "1001",
+                "name": "李二",
+                "job": "tester",
+                "department": "soft",
+                "salary": 10000
+            },
+            {
+                "no": "1002",
+                "name": "李三",
+                "job": "tester",
+                "department": "soft",
+                "salary": 20000,
+                "customers": [
+                    {
+                        "cname": "顾客1"
+                    },{
+                        "cname": "顾客2"
+                    }
+                ]
+            }
+        ];
+        console.log(json);
+        for (var i=0;i<json.length;i++){
+            var emp=json[i];
+            document.write("<h1>");
+            document.write(emp.no);
+            document.write(emp.name);
+            document.write(emp.job);
+            document.write(emp.salary);
+            document.write(emp.department);
+            document.write("</h1>");
+            if(emp.customers!=null){
+                document.write("<h2>");
+                for (var j=0;j<emp.customers.length;j++){
+                    document.write(emp.customers[j].cname+" ")
+                }
+                document.write("<h2>");
+
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+[
+  {
+    "no": "1001",
+    "name": "李二",
+    "job": "tester",
+    "department": "soft",
+    "salary": 10000
+  },
+  {
+    "no": "1002",
+    "name": "李三",
+    "job": "tester",
+    "department": "soft",
+    "salary": 20000,
+    "customers": [
+      {
+        "cname": "顾客1"
+      },{
+        "cname": "顾客2"
+      }
+    ]
+  }
+]
