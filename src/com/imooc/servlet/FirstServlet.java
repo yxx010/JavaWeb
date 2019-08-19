@@ -14,7 +14,17 @@ public class FirstServlet extends HttpServlet {
         String html="<h1 style='color:red'>hi,"+name+"!</h1><hr/>";
         PrintWriter out=resp.getWriter();
         out.println(html);
+
+        StringBuffer url=req.getRequestURL();
+        System.out.println("url-"+url);
+        String uri=req.getRequestURI();
+        System.out.println("uri-"+uri);
+        String tempUrl = url.delete(url.length() - uri.length(), url.length()).append("/").toString();
+        System.out.println("tempUrl-"+tempUrl);
+
+        String tempUrl1 = url.delete(0, 4).toString();
+        System.out.println("tempUrl1-"+tempUrl1);
+
+
     }
 }
-
-
