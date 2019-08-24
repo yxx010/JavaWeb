@@ -30,7 +30,11 @@
   <a href="emp.html">js展示json数据</a><br>
   <a href="json2.html">字符转json数据</a><br>
   <a href="json3.html">json转字符串</a><br>
-  <a href="lab.html">jquery选择标签</a><br>
+  <a href="lab.html">lab0jquery选择标签</a><br>
+  <a href="lab1.html">lab1操作元素属性</a><br>
+  <a href="lab2.html">lab2操作css属性</a><br>
+  <a href="lab3.html">lab3设置元素内容</a><br>
+  <a href="lab4.html">lab4事件</a><br>
 
 
   </body>
