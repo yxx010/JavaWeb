@@ -30,6 +30,8 @@
   <a href="emp.html">js展示json数据</a><br>
   <a href="json2.html">字符转json数据</a><br>
   <a href="json3.html">json转字符串</a><br>
+  <a href="lab.html">jquery选择标签</a><br>
+
 
   </body>
 </html>
