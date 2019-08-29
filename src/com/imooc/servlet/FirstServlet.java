@@ -18,12 +18,18 @@ public class FirstServlet extends HttpServlet {
         StringBuffer url=req.getRequestURL();
         System.out.println("url-"+url);
         String uri=req.getRequestURI();
-        System.out.println("uri-"+uri);
+        System.out.println("url-"+url);
         String tempUrl = url.delete(url.length() - uri.length(), url.length()).append("/").toString();
         System.out.println("tempUrl-"+tempUrl);
+        System.out.println("url-"+url);
+        System.out.println("uri-"+uri);
 
-        String tempUrl1 = url.delete(0, 4).toString();
-        System.out.println("tempUrl1-"+tempUrl1);
+        StringBuffer url2=req.getRequestURL();
+
+        String tempUrl2 = url.substring(0,url2.length() - uri.length());
+        System.out.println("tempUrl2-"+tempUrl2);
+        System.out.println("url-"+url);
+
 
 
     }

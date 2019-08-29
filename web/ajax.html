@@ -10,35 +10,43 @@
 <input type="button" value="部门列表" id="depart-name">
 <div id="container"></div>
 <script>
-    document.getElementById("emp-name").onclick=function () {
-        //1.创建
-        var xmlhttp;
-        if(window.XMLHttpRequest){
-            xmlhttp=new XMLHttpRequest();
-        }else{
-            xmlhttp=new ActiveXObject("Microsoft.XMlHTPP");
-        }
-        //2.发送ajax
-        xmlhttp.open("GET","/EmployeeList",true);
-        xmlhttp.send();
-        //3.处理服务的响应
-        xmlhttp.onreadystatechange=function(){
-            if(xmlhttp.readyState==4&&xmlhttp.status==200){
-                var text=xmlhttp.responseText;
-                var json=JSON.parse(text);
-                var html="";
-                for (var i=0;i<json.length;i++){
-                    var emp=json[i];
-                    html=html+"<h1>"+emp.name+"</h1>";
+    var oButton=document.getElementsByTagName("input");
+    for(var i=0;i<oButton.length;i++){
+        oButton[i].onclick=function () {
+            console.log(this.value);
+            console.log(this.id);
+            var type=this.value;
+            //1.创建
+            var xmlhttp;
+            if(window.XMLHttpRequest){
+                xmlhttp=new XMLHttpRequest();
+            }else{
+                xmlhttp=new ActiveXObject("Microsoft.XMlHTPP");
+            }
+            //2.发送ajax
+            xmlhttp.open("GET","/EmployeeList",true);
+            xmlhttp.send();
+            //3.处理服务的响应
+            xmlhttp.onreadystatechange=function(){
+                if(xmlhttp.readyState==4&&xmlhttp.status==200){
+                    var text=xmlhttp.responseText;
+                    var json=JSON.parse(text);
+                    var html="";
+                    for (var i=0;i<json.length;i++){
+                        var emp=json[i];
+                        if(type=="员工列表"){
+                            html=html+"<h1>"+emp.name+"</h1>";
+                        }else if(type=="职位列表"){
+                            html=html+"<h1>"+emp.job+"</h1>";
+                        }else if(type=="部门列表"){
+                            html=html+"<h1>"+emp.department+"</h1>";
+                        }
+                    }
+                    document.getElementById("container").innerHTML=html;
                 }
-                document.getElementById("container").innerHTML=html;
             }
         }
     }
-    void function print(id,name){
-
-    }
-
 </script>
 </body>
 </html>
