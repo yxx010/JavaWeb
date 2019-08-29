@@ -35,6 +35,7 @@
   <a href="lab2.html">lab2操作css属性</a><br>
   <a href="lab3.html">lab3设置元素内容</a><br>
   <a href="lab4.html">lab4事件</a><br>
+  <a href="ajax.html">ajax</a><br>
 
 
   </body>
