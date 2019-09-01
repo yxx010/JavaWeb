@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <style type="text/css">
+        input {
+            width: 33%;
+        }
+
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="员工列表" id="emp-name">
+<input type="button" value="职位列表" id="job-name">
+<input type="button" value="部门列表" id="depart-name">
+<div id="container"></div>
+<script type="application/javascript" src="js/jquery-3.4.1.js"></script>
+<script>
+    var oButton=document.getElementsByTagName("input");
+    for(var i=0;i<oButton.length;i++){
+        oButton[i].onclick=function () {
+            console.log(this.value);
+            console.log(this.id);
+            var type=this.value;
+            $(function(){
+                $.ajax({
+                    "url":"/EmployeeList",
+                    "type":"get",
+                    //方法一：多个参数
+                    // "data":"t=pypl&abc=123",
+                    //方法二：多个参数
+                    //"data":{"t":"pypl","abc":"123"},
+                    "data":{"t":"pypl"},
+                    "dataType":"json",
+                    "success":function(json){
+                        $("#container").text("");
+                        for (var i=0;i<json.length;i++){
+                            if(type=="员工列表"){
+                                $("#container").append("<h1>"+json[i].name+"</h1>")
+                            }else if(type=="职位列表"){
+                                $("#container").append("<h1>"+json[i].job+"</h1>")
+                            }else if(type=="部门列表"){
+                                $("#container").append("<h1>"+json[i].department+"</h1>")
+                            }
+                        }
+                    }
+                })
+            })
+
+        }
+    }
+</script>
+
+</body>
+</html>

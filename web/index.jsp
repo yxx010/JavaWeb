@@ -36,6 +36,10 @@
   <a href="lab3.html">lab3设置元素内容</a><br>
   <a href="lab4.html">lab4事件</a><br>
   <a href="ajax.html">ajax作业</a><br>
+  <a href="ajax_jquery.html">ajax+jquery组合使用</a><br>
+  <a href="ajax2.html">ajax作业2</a><br>
+  <a href="ajax3.html">二级菜单</a><br>
+
 
 
   </body>

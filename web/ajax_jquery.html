@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <style type="text/css">
+        input {
+            width: 33%;
+        }
+
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="员工列表" id="emp-name">
+<input type="button" value="职位列表" id="job-name">
+<input type="button" value="部门列表" id="depart-name">
+<div id="container"></div>
+<script type="application/javascript" src="js/jquery-3.4.1.js"></script>
+<script>
+    $(function(){
+        $.ajax({
+            "url":"/EmployeeList",
+            "type":"post",
+            //方法一：多个参数
+            // "data":"t=pypl&abc=123",
+            //方法二：多个参数
+            "data":{"t":"pypl","abc":"123"},
+            "dataType":"json",
+            "success":function(json){
+                console.log(json);
+                for (var i=0;i<json.length;i++){
+                    $("#container").append("<h1>"+json[i].name+"</h1>")
+                }
+                },
+            "error":function(xmlhttp,errorText){
+                console.log(xmlhttp);
+                console.log(errorText);
+                if(xmlhttp.status=="405"){
+                    alert("无效的请求");
+                }else if(xmlhttp.status="404"){
+                    alert("未找到URL资源");
+                }else if(xmlhttp.status="500")
+                    alert("服务器内部错误")
+            }
+        })
+    })
+</script>
+
+</body>
+</html>

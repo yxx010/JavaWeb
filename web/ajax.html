@@ -32,10 +32,11 @@
             }else{
                 xmlhttp=new ActiveXObject("Microsoft.XMlHTPP");
             }
-            //2.发送ajax
+            //2.发送ajax，true代表异步执行，false同步处理
             xmlhttp.open("GET","/EmployeeList",true);
             xmlhttp.send();
             //3.处理服务的响应
+
             xmlhttp.onreadystatechange=function(){
                 if(xmlhttp.readyState==4&&xmlhttp.status==200){
                     var text=xmlhttp.responseText;
