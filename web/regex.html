@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="formInfo" action="#" method="post">
+    <div id="err" style="color: red"></div>
+    <div>姓名：<input id="name" name="name"></div>
+    <div>身份证：<input id="idno" name="idno"></div>
+    <div><input type="submit"></div>
+</form>
+<script type="application/javascript">
+    document.getElementById("formInfo").onsubmit=function(){
+        //在JS中定义正则表达式对象值需要在/正则表达式/
+        regex1=/^[\u4e00-\u9fa5]{2,8}$/;
+        regex2=/^[12345678]\d{16}[0-9xX]$/;
+        var name=document.getElementById("name").value;
+        var idno=document.getElementById("idno").value;
+        if(regex1.test(name)==false){
+            document.getElementById("err").innerHTML="无效姓名";
+            return false;
+        }else if(regex2.test(idno)==false){
+            document.getElementById("err").innerHTML="无效身份证";
+        }else {
+            alert("验证通过，准备提交");
+            return true;
+        }
+    }
+</script>
+</body>
+</html>
