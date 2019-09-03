@@ -39,6 +39,8 @@
   <a href="ajax_jquery.html">ajax+jquery组合使用</a><br>
   <a href="ajax2.html">ajax作业2</a><br>
   <a href="ajax3.html">二级菜单</a><br>
+  <a href="FilterDemo.jsp">过滤器demo</a><br>
+
 
 
 
