@@ -62,7 +62,7 @@
         <url-pattern>/message.jsp</url-pattern>
     </filter-mapping>
     <!--MyFirstListener配置 -->
-    <listener>
+    <!--listener>
         <listener-class>listener.MyFirstListener</listener-class>
     </listener>
     <context-param>
@@ -72,15 +72,15 @@
     <context-param>
         <param-name>version</param-name>
         <param-value>v1.0.0</param-value>
-    </context-param>
+    </context-param-->
     <!--MyFirstListener session 1分钟超时 -->
-    <session-config>
+    <!--session-config>
         <session-timeout>1</session-timeout>
-    </session-config>
+    </session-config-->
     <!--MyServletRequestListener配置 -->
-    <listener>
+    <!--listener>
         <listener-class>listener.MyServletRequestListener</listener-class>
-    </listener>
+    </listener-->
     <!--listener>
         <listener-class>listener.MyServletContextAttributeListener</listener-class>
     </listener-->
