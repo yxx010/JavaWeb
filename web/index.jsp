@@ -40,7 +40,7 @@
   <a href="ajax2.html">ajax作业2</a><br>
   <a href="ajax3.html">二级菜单</a><br>
   <a href="FilterDemo.jsp">过滤器demo</a><br>
-
+  <a href="servlet_request.jsp?par=request_par" target="_blank">servlet request listener初始化</a>
 
 
 
