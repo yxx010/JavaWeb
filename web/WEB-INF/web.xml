@@ -61,6 +61,9 @@
         <filter-name>sessionFilter</filter-name>
         <url-pattern>/message.jsp</url-pattern>
     </filter-mapping>
+    <listener>
+        <listener-class>listener.MyHttpSessionAttributeListener</listener-class>
+    </listener>
     <!--MyFirstListener配置 -->
     <!--listener>
         <listener-class>listener.MyFirstListener</listener-class>
