@@ -19,6 +19,6 @@ public class CourceServlet extends HttpServlet {
         Course course=new Course(1,"英语","学历教育");
         HttpSession session=request.getSession();
         session.setAttribute("course",course);
-        request.getRequestDispatcher("/demo.jsp").forward(request,response);
+        request.getRequestDispatcher("/el_demo.jsp").forward(request,response);
     }
 }
