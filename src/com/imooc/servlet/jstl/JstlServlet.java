@@ -35,6 +35,6 @@ public class JstlServlet extends HttpServlet {
         set.add("February");
         set.add("April");
         request.setAttribute("months",set);
-        request.getRequestDispatcher("/core.jsp").forward(request,response);
+        request.getRequestDispatcher("/jstl_core.jsp").forward(request,response);
     }
 }
