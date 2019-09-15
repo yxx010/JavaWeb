@@ -30,6 +30,20 @@
         <servlet-name>ComputerServlet</servlet-name>
         <url-pattern>/Computer</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <!--freemarker-->
+        <servlet-name>freemarker</servlet-name>
+        <servlet-class>freemarker.ext.servlet.FreemarkerServlet</servlet-class>
+        <init-param>
+            <param-name>TemplatePath</param-name>
+            <param-value>/WEB-INF/ftl</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>freemarker</servlet-name>
+        <url-pattern>*.ftl</url-pattern>
+    </servlet-mapping>
     <!--过滤器配置-->
     <filter>
         <filter-name>characterEncodingFilter</filter-name>

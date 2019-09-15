@@ -125,12 +125,12 @@
 
                     <div class="form-group">
                         <label>职务</label>
-                        <input type="text" name="job" class="form-control" id="sal" placeholder="请输入职务">
+                        <input type="text" name="job" class="form-control"  placeholder="请输入职务">
                     </div>
 
                     <div class="form-group">
-                        <label for="sal">工资</label>
-                        <input type="text" name="salary" class="form-control" id="sal" placeholder="请输入工资">
+                        <label>工资</label>
+                        <input type="text" name="salary" class="form-control" placeholder="请输入工资">
                     </div>
 
                     <div class="form-group" style="text-align: center;">

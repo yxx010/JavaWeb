@@ -41,6 +41,7 @@
   <a href="ajax3.html">二级菜单</a><br>
   <a href="FilterDemo.jsp">过滤器+监听组合demo</a><br>
   <a href="servlet_request.jsp?par=request_par" target="_blank">servlet request listener初始化</a>
+  <a href="/EmployeeFreeMarkerListServlet">FreeMarker练习</a><br>
 
 
 
