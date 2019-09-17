@@ -36,14 +36,12 @@
   <a href="lab3.html">lab3设置元素内容</a><br>
   <a href="lab4.html">lab4事件</a><br>
   <a href="ajax.html">ajax作业</a><br>
+  <a href="ajax2.html">ajax2+j2qeu</a><br>
+  <a href="ajax3.html">二级菜单ajax3</a><br>
   <a href="ajax_jquery.html">ajax+jquery组合使用</a><br>
-  <a href="ajax2.html">ajax作业2</a><br>
-  <a href="ajax3.html">二级菜单</a><br>
   <a href="FilterDemo.jsp">过滤器+监听组合demo</a><br>
   <a href="servlet_request.jsp?par=request_par" target="_blank">servlet request listener初始化</a>
   <a href="/EmployeeFreeMarkerListServlet">FreeMarker练习</a><br>
-
-
 
   </body>
 </html>
