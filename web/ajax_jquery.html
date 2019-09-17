@@ -26,8 +26,9 @@
             "type":"post",
             //方法一：多个参数
             // "data":"t=pypl&abc=123",
-            //方法二：多个参数
-            "data":{"t":"pypl","abc":"123"},
+            //方法二：多个参数 abc这个参数现在没有
+            //"data":{"t":"pypl","abc":"123"},
+            "data":{"t":"pypl"},
             "dataType":"json",
             "success":function(json){
                 console.log(json);
