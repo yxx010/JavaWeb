@@ -42,6 +42,9 @@
   <a href="FilterDemo.jsp">过滤器+监听组合demo</a><br>
   <a href="servlet_request.jsp?par=request_par" target="_blank">servlet request listener初始化</a>
   <a href="/EmployeeFreeMarkerListServlet">FreeMarker练习</a><br>
+  <a href="upload.jsp">上传</a><br>
+  <a href="checkCode.jsp">验证码</a><br>
+
 
   </body>
 </html>
