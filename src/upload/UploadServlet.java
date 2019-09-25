@@ -1,4 +1,4 @@
-package com.imooc.servlet.upload;
+package upload;
 
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
@@ -15,7 +15,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.List;
-import java.util.UUID;
 
 @WebServlet("/UploadServlet")
 public class UploadServlet extends HttpServlet {
@@ -51,12 +50,7 @@ public class UploadServlet extends HttpServlet {
                     String path=getServletContext().getRealPath("/upload");
                     System.out.println(path);
                     //创建输出流与输入流对接
-                    Integer idx=fileName.indexOf(".");
-                    String exName=fileName.substring(idx);
-                    String newFileName=UUID.randomUUID().toString();
-
-                    OutputStream fos=new FileOutputStream(path+"/"+newFileName+exName);
-                    //OutputStream fos=new FileOutputStream("/Users/yangxiaoxiao/Documents/"+fileName);
+                    OutputStream fos=new FileOutputStream(path+"/"+UploadUtils.getUuidFileName(fileName));
                     int len=0;
                     byte []b=new byte[1024];
                     while ((len=is.read(b))!=-1){
