@@ -7,19 +7,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "checkcode.CheckCodeServlet")
+@WebServlet("/CheckCodeServlet")
 public class CheckCodeServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        doGet(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String code1=(String) request.getSession().getAttribute("checkCode");
+        System.out.println(code1);
         String code2=request.getParameter("checkCode");
+        System.out.println(code2);
+
         if(code2==null||!code2.equals(code1)){
-            request.setAttribute("msg","验证码输入不正确");
+            request.setAttribute("msg","验证码输入错误");
             request.getRequestDispatcher("/checkCode.jsp").forward(request,response);
             return;
         }
+        response.getWriter().println("Success");
     }
 }
