@@ -12,8 +12,15 @@
 </head>
 <body>
 <form action="" method="post">
-    验证码：<input type="text" name="checkcode"><img src="${pageContext.request.contextPath}/CheckImgServlet"><br/>
+    验证码：<input type="text" name="checkcode">
+    <img id=codeImg onclick="changeImg()" src="${pageContext.request.contextPath}/CheckImgServlet"><br/>
     <input type="submit" value="提交">
 </form>
 </body>
+<script>
+function changeImg() {
+    var codeImg=document.getElementById("codeImg");
+    codeImg.src="${pageContext.request.contextPath}/checkcode.CheckImgServlet?time="+new Date().getTime();
+}
+</script>
 </html>
