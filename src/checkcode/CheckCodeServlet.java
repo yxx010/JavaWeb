@@ -19,7 +19,7 @@ public class CheckCodeServlet extends HttpServlet {
         String code2=request.getParameter("checkCode");
         System.out.println(code2);
 
-        if(code2==null||!code2.equals(code1)){
+        if(code2==null||!code2.equalsIgnoreCase(code1)){
             request.setAttribute("msg","验证码输入错误");
             request.getRequestDispatcher("/checkCode.jsp").forward(request,response);
             return;
